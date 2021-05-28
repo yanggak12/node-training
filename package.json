@@ -1,0 +1,22 @@
+{
+  "name": "nodeserver",
+  "version": "1.0.0",
+  "description": "server study",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/yanggak12/node-training.git"
+  },
+  "author": "yys",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yanggak12/node-training/issues"
+  },
+  "homepage": "https://github.com/yanggak12/node-training#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
