@@ -3,7 +3,7 @@
 ## 1. Npm Initializing
 
 ```
-npm init
+    npm init
 ```
 
 ## 2. Express Install
@@ -16,9 +16,9 @@ npm init
 
   - index.js
   
-   ```javascript
-        var express = require("express");
-        var app = express();
+```javascript
+    var express = require("express");
+    var app = express();
 
-        app.listen(9999);
-   ```
+    app.listen(9999);
+```
