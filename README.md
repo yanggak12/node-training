@@ -10,9 +10,10 @@
 
 ```
     npm install express
-    npm install nodemon -> for developer
+    npm install nodemon
     npm install url
     npm install querystring
+    npm install body-parser
 ```
 
 ## 3. First Set up
@@ -29,5 +30,6 @@ app.listen(9999);
 ## 4. HTTP Method
 
 - GET
+  페이지 라우팅
 
 - POST
