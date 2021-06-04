@@ -23,11 +23,8 @@ var app = express();
 app.listen(9999);
 ```
 
-## 4. GET & POST Method
+## 4. HTTP Method
 
-- GET : URL
+- GET
 
-  - 값을 확인할 때
-
-- POST : JSON
-  - 값을 전달할 때
+- POST
