@@ -6,10 +6,13 @@
     npm init
 ```
 
-## 2. Express Install
+## 2. Install Set up
 
 ```
     npm install express
+    npm install nodemon -> for developer
+    npm install url
+    npm install querystring
 ```
 
 ## 3. First Set up
