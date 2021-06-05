@@ -1,0 +1,58 @@
+@font-face {
+  src: url("./assets/font/BMEULJIRO.otf");
+  font-family: "BM";
+}
+* {
+  box-sizing: border-box;
+  font-family: BM;
+}
+body {
+  background-color: #f0e8d9;
+}
+.header {
+  height: 300px;
+  padding-top: 80px;
+}
+h1 {
+  font-size: 64px;
+  color: #58595b;
+  text-align: center;
+
+  letter-spacing: 5px;
+}
+h2.subtitle {
+  font-size: 32px;
+  color: #58595b;
+  margin-top: 30px;
+  margin-bottom: 75px;
+  text-align: center;
+  letter-spacing: 3px;
+}
+.sign {
+  text-align: center;
+  margin-top: 100px;
+}
+input.login {
+  height: 50px;
+  font-size: 18px;
+  width: 300px;
+}
+input.submit {
+  width: 300px;
+  height: 50px;
+  font-size: 18px;
+}
+
+#register {
+  display: inline;
+  font-size: 15px;
+  margin-right: 250px;
+  color: maroon;
+}
+
+.logo {
+  background-image: url("./assets/image/don.png");
+  background-size: contain;
+  height: 130px;
+  margin-top: 10%;
+}

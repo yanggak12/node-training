@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <link href="index.css" rel="stylesheet">
+    <title>로그인 - 윤상대학교</title>
+</head>
+<body>
+    <body>
+        <div class="header">
+            <h1>윤상대학교</h1>
+            <h2 class="subtitle">수강신청 사이트</h2>
+        </div>
+        <div class="sign">
+            <form class="login" action="http://localhost:5000/login_check.html" method="POST">
+                <p><input class="login" type="text" name="id" placeholder="학번" /></p>
+                <p><input class="login" type="password" name="password" placeholder="비밀번호" /></p>
+                <p><input class="submit" type="submit" value="로그인"/></p>
+            </form>
+            <a href="/register" id="register">
+                회원가입
+            </a>
+        </div>
+        
+        <div class="logo"></div>    
+        
+</body>
+</html>
