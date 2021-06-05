@@ -7,6 +7,12 @@ node.js training :fire:
 1. npm init
 
 2. npm install list
+
    - express
-   - mongoose
+   - mongoose -> for MongoDB
    - nodemon
+
+3. Mongo DB
+
+   - Model : frame of Schemas
+   - Schema : set up informations
