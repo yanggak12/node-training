@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>강의 목록</title>
+    <script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.3.2.js"></script>
+<style>
+
+body{
+    background-color: #f0e8d9;
+    text-align: center;
+}
+table{
+	border: 2px solid #393939;
+	border-collapse: collapse;
+	font-size: 0.9em;
+    text-align: center;
+    margin: 0 auto;
+}
+th, td{
+	border: 1px solid #393939;
+	border-collapse: collapse;
+}
+th{
+	height: 5px;
+}
+td {
+	width: 75px;
+	height: 60px;
+}
+caption {
+    font-size: 30px;
+    font-weight: bold;
+}
+a {
+    text-decoration: none;
+}
+h3 {
+    color: gray;
+}
+
+</style>
+</head>
+<body>
+    <div>
+        <h1>강의 목록</h1>
+        <a href="file:///Users/yang-yoonsang/donga/sosil/enrol/timetable.html"><h3>시간표 보기</h3></a>
+        <a href="file:///Users/yang-yoonsang/donga/sosil/enrol/home.html"><h3>홈으로 가기</h3></a>
+        <a href="file:///Users/yang-yoonsang/donga/sosil/enrol/index.html"><h3>로그아웃</h3></a>
+    </div>
+<table width="1000" style="color: #121212">
+<caption>▶  강의 목록 ◀</caption>
+  <tr width="19%">
+    <th>강의명</th>
+    <th>강의코드</th>
+    <th>교수명</th>
+    <th>시간</th>
+    <th>강의실</th>
+    <th>타과수강가능</th>
+  </tr>
+  <tr>
+    <th>수치해석</th>
+    <td>YYS001</td>
+    <td>양윤상</td>
+    <td>12-14</td>
+    <td>YS453</td>
+    <td>Y</td>
+  </tr>
+  <tr>
+    <th>Talking English 2B</th>
+    <td>YYS002</td>
+    <td>양용상</td>
+    <td>13-15</td>
+    <td>YS453</td>
+    <td>Y</td>
+  </tr>
+  <tr>
+    <th>운영체제</th>
+    <td>YYS003</td>
+    <td>윤상</td>
+    <td>12-14</td>
+    <td>YS453</td>
+    <td>Y</td>
+  </tr>
+  <tr>
+    <th>소프트웨어 설계 및 실습</th>
+    <td>YYS004</td>
+    <td>유운상</td>
+    <td>09-11</td>
+    <td>YS453</td>
+    <td>Y</td>
+  </tr>
+  <tr>
+    <th>데이터베이스</th>
+    <td>YYS005</td>
+    <td>양념상</td>
+    <td>12-14</td>
+    <td>YS453</td>
+    <td>Y</td>
+  </tr>
+  <tr>
+    <th>행복한 결혼과 가족</th>
+    <td>YYS006</td>
+    <td>양윤상</td>
+    <td>15-17</td>
+    <td>YS453</td>
+    <td>Y</td>
+  </tr>
+  <tr>
+    <th>심리학</th>
+    <td>YYS007</td>
+    <td>양양상</td>
+    <td>18-20</td>
+    <td>YS453</td>
+    <td>Y</td>
+  </tr>
+  <tr>
+    <th>스페인에서 살아남기</th>
+    <td>YYS008</td>
+    <td>양상추</td>
+    <td>12-14</td>
+    <td>YS453</td>
+    <td>Y</td>
+  </tr>
+  <tr>
+    <th>미국에서 살아남기</th>
+    <td>YYS009</td>
+    <td>양융상</td>
+    <td>12-14</td>
+    <td>YS453</td>
+    <td>Y</td>
+  </tr>
+  <tr>
+    <th>컴퓨터 구조</th>
+    <td>YYS010</td>
+    <td>융상</td>
+    <td>12-14</td>
+    <td>YS453</td>
+    <td>Y</td>
+  </tr>
+</table>
+<script>
+    $('document').ready(()=>{
+        $('#submit').on('click',()=>{
+          // ajax -> USER의 등록된 강의 DB에 입력
+            alert($('.inp').val()+' 등록 완료');
+            })
+        })
+</script>
+<p><input class="inp" type="text" placeholder="강의 코드 입력" style="height: 30px; width: 200px;"/></p>
+<button id="submit" style="width: 200px; height: 30px;">수강신청</button>
+</body>
+</html>

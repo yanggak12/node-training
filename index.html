@@ -2,26 +2,82 @@
 <head>
     <meta charset="UTF-8">
     <link href="index.css" rel="stylesheet">
+    <style>
+        @font-face {
+        src: url("./assets/font/BMEULJIRO.otf");
+        font-family: "BM";
+      }
+      * {
+        box-sizing: border-box;
+        font-family: "BM";
+      }
+      body {
+        background-color: #f0e8d9;
+      }
+      .header {
+        height: 300px;
+        padding-top: 80px;
+      }
+      h1 {
+        font-size: 64px;
+        color: #58595b;
+        text-align: center;
+      
+        letter-spacing: 5px;
+      }
+      h2.subtitle {
+        font-size: 32px;
+        color: #58595b;
+        margin-top: 30px;
+        margin-bottom: 75px;
+        text-align: center;
+        letter-spacing: 3px;
+      }
+      .sign {
+        text-align: center;
+        margin-top: 100px;
+      }
+      input.login {
+        height: 50px;
+        font-size: 18px;
+        width: 300px;
+        font-family: 'Courier New', Courier, monospace;
+      }
+      input.submit {
+        width: 300px;
+        height: 50px;
+        font-size: 18px;
+      }
+      
+      #register {
+        display: inline;
+        font-size: 15px;
+        margin-right: 250px;
+        color: maroon;
+      }
+      </style>
     <title>로그인 - 윤상대학교</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
 </head>
 <body>
     <body>
+        <script>
+            
+        </script>
         <div class="header">
             <h1>윤상대학교</h1>
             <h2 class="subtitle">수강신청 사이트</h2>
         </div>
         <div class="sign">
-            <form class="login" action="http://localhost:5000/login_check.html" method="POST">
-                <p><input class="login" type="text" name="id" placeholder="학번" /></p>
+            <form class="login" action="file:///Users/yang-yoonsang/donga/sosil/enrol/home.html" method="POST">
+                <p><input class="login" type="text" name="snum" placeholder="학번" /></p>
                 <p><input class="login" type="password" name="password" placeholder="비밀번호" /></p>
                 <p><input class="submit" type="submit" value="로그인"/></p>
             </form>
-            <a href="/register" id="register">
+            <a href="file:///Users/yang-yoonsang/donga/sosil/enrol/register.html" id="register">
                 회원가입
             </a>
-        </div>
-        
-        <div class="logo"></div>    
+        </div>ㅣ
         
 </body>
 </html>

@@ -2,9 +2,100 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.3.2.js"></script>
     <title>회원가입 - 윤상대학교</title>
+    <style>
+        @font-face {
+            src: url("./assets/font/BMEULJIRO.otf");
+            font-family: "BM";
+          }
+          * {
+            box-sizing: border-box;
+            font-family: "BM";
+          }
+          body {
+            background-color: #f0e8d9;
+            text-align: center;
+          }
+          h1 {
+            font-size: 64px;
+            color: #58595b;
+            text-align: center;
+            letter-spacing: 5px;
+          }
+          a {
+            text-decoration: none;
+            }
+        h3 {
+            color: gray;
+            
+        }
+        fieldset {
+            width: 500px;
+            margin : 0 auto;
+            margin-top: 30px;
+            padding : 30px
+        }
+        button {
+            font-size: 20px;
+            width: 150px;
+            height: 50px;
+            background-color:brown;
+            color :beige;
+            margin-top: 30px;
+        }
+       
+    </style>
 </head>
 <body>
+    <script>
+        $('document').ready(()=>{
+            $('#submit').on('click',(e)=>{
+                const info = {
+                    name: $('name').val(),
+                    snum: $('snum').val(),
+                    email: $('email').val(),
+                    phonenumber: $('pnum').val(),
+                    password: $('password').val(),
+                    dept: $('dept').val()
+                }
+                $.ajax({
+                    url:"http://localhost:5000/register",
+                    async: false,
+                    type: "POST",
+                    data: {
+                        snum: 123123,
+                        password: "123123"
+                    },
+                    dataType: 'json',
+                    complete:function(){
+                        e.preventDefault();
+                        alert($('#name').val()+'님, 환영합니다. \n정상적으로 회원가입이 되었습니다.');
+                        window.location.href="file:///Users/yang-yoonsang/donga/sosil/enrol/index.html";
+                    }
+                })
+                })
+            })
+    </script>
+    <div>
+        <h1>회원가입</h1>
+        <h2>- 윤상대학교 -</h2>
+        <a href="file:///Users/yang-yoonsang/donga/sosil/enrol/index.html"><h3>회원가입 취소</h3></a>
+    </div>
+    <fieldset>
+        <legend>회원 가입을 위한 정보 입력</legend>
+        <form>
+            <p>이름 : <input type="text" id="name"></p>
+            <p>학번 : <input type="text" id="snum"></p>
+            <p>이메일 : <input type="text" id="email"></p>
+            <p>전화번호 : <input type="text" id="pnum"></p>
+            <p>학과 : <input type="text" id="dept"></p>
+            <p>비밀번호 : <input type="text" id="password"></p>
+            <button id="submit">가입하기</button>
+        </form>
+        
+    </fieldset>
     
 </body>
 </html>

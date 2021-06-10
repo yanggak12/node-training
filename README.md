@@ -11,6 +11,7 @@ node.js training :fire:
    - express
    - mongoose -> for MongoDB
    - nodemon
+   - bcrypt -> for security
 
 3. Mongo DB
 

@@ -7,7 +7,6 @@ const { User } = require("./models/User");
 
 //application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
-
 //application/json
 app.use(bodyParser.json());
 
@@ -22,7 +21,9 @@ mongoose
   .then(() => console.log("MongoDB Connencted..."))
   .catch((err) => console.log(err));
 
-app.get("/", (req, res) => res.send("Hello Mongo DB"));
+app.get("/", (req, res) => res.sendFile(__dirname + "/index.html")); // 랜딩 페이지 : index.html
+
+app.get("/register", (req, res) => res.sendFile(__dirname + "/register.html")); // 회원가입 페이지 get
 
 app.post("/register", (req, res) => {
   // 회원 가입에 필요한 정보 client에서 가져온 것들을 DB에 넣어준다.
@@ -37,10 +38,28 @@ app.post("/register", (req, res) => {
 });
 
 app.post("/login", (req, res) => {
-  console.log("user login");
-
-  let id = req.params("id");
-  let pw = req.params("password");
+  // 요청된 학번이 db에 있는지 찾기
+  User.findOne({ snum: req.body.snum }, (err, userInfo) => {
+    if (!userInfo) {
+      return res.json({
+        loginSuccess: false,
+        message: "해당 학번에 해당하는 회원 정보가 없습니다.",
+      });
+    }
+    // 요청된 학번이 db에 있으면 비밀번호가 맞는지 확인
+    User.findOne({ password: req.body.password }, (err, userInfo) => {
+      if (!userInfo) {
+        return res.json({
+          loginSuccess: false,
+          message: "비밀번호가 일치하지 않습니다.",
+        });
+      }
+    });
+    // 로그인 성공
+    return res.json({
+      loginSuccess: true,
+    });
+  });
 });
 
-app.listen(port, () => console.log(`Example app listening on port ${port} !!`));
+app.listen(port, () => console.log(`App is listening on port ${port} !!`));
